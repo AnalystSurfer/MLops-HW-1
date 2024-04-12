@@ -14,10 +14,12 @@ def generate_data(n, noise=0.0, anomaly=False):
         y[-1] += 5  
     return pd.DataFrame({'x': x, 'y': y})
 
+
 train_data_1 = generate_data(200, noise=0.1)
 train_data_2 = generate_data(200, noise=0.2, anomaly=True)
 train_data = pd.concat([train_data_1, train_data_2])
 train_data.to_csv('train/train_data.csv', index=False)
+
 
 test_data_1 = generate_data(50, noise=0.1)
 test_data_2 = generate_data(50, noise=0.3, anomaly=True)
