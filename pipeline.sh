@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo "Running data_creation.py"
 python data_creation.py
 echo "Running model_preprocessing.py"
